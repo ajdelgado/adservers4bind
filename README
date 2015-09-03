@@ -1,0 +1,14 @@
+adservers4bind.sh
+
+Antonio J. Delgado 2015 antoniodelgado@susurrando.com
+
+Description:
+Download a list of hosts files with servers that provide ads to be blocked using the BIND9 service in this machine.
+Based on http://www.deer-run.com/~hal/sysadmin/dns-advert.html
+
+Configuration:
+You need to include in your BIND configuration:
+include "/etc/bind/adservers.conf";
+
+Installation:
+Create a scheduled task to run the script as a user that can reload bind config and write into the /etc/bin/adservers.conf file.
