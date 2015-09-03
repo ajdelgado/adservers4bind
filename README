@@ -7,8 +7,14 @@ Download a list of hosts files with servers that provide ads to be blocked using
 Based on http://www.deer-run.com/~hal/sysadmin/dns-advert.html
 
 Configuration:
-You need to include in your BIND configuration:
-include "/etc/bind/adservers.conf";
+- Check the path to your bind configuration, and change in the BINDCFGPATH variable if needed.
+- You need to include in your BIND configuration (/etc/bind/named.conf.local in Ubuntu):
+	include "/etc/bind/adservers.conf";
+
+Requeriments:
+- bind9 (Ubuntu: sudo apt-get install bind9)
+- dos2unix (Ubuntu: sudo apt-get install dos2unix)
+- wget (Ubuntu: sudo apt-get install wget)
 
 Installation:
-Create a scheduled task to run the script as a user that can reload bind config and write into the /etc/bin/adservers.conf file.
+- Create a scheduled task to run the script as a user that can reload bind config and write into the /etc/bin/adservers.conf file.
